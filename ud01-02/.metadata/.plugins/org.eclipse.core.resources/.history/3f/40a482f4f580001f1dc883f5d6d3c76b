@@ -1,0 +1,28 @@
+package ud01_02;
+import java.util.*;
+public class Ejercicio01 {
+	public static Scanner sc=new Scanner(System.in);
+	public void run() {
+		
+	}
+	public void introducirNumero()
+	{
+		
+		System.out.println("Introduzca un numero positivo");
+		int num=sc.nextInt();
+	}
+	public comprobar comprobar(int numero) {
+		if(numero<=0) {
+			escribir();
+		}else {
+			viualizar(numero);
+		}
+	}
+
+	public static void main(String[] args) {
+		Ejercicio01 interfaz=new Ejercicio01();
+		interfaz.run();
+
+	}
+
+}
