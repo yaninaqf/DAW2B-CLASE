@@ -1,0 +1,44 @@
+package ud01_02;
+import java.util.*;
+public class Ejercicio2 {
+	public static Scanner sc=new Scanner(System.in);
+	public void run() {
+		int suma=sumarPotencias(3);
+		System.out.println("La suma de potencias es "+suma);
+	}
+	
+	public int introducirNumero() {
+		int numero=0;
+		System.out.println("Introduce un numero del 1 al 7");
+		numero=sc.nextInt();
+		return numero;
+		
+	}
+	public int validarNumero() {
+		int numero=0;
+		do {
+			numero=introducirNumero();
+		}while(numero<1 && numero>7);
+		return numero;
+	}
+	public int sumarPotencias(int numero) {
+		int potencia=1;
+		int suma=0;
+		for(int n=1;n<=numero;n++) {//n=1
+			
+			for(int p=1;p<=n;p++) {//p=1
+				potencia*=numero;
+				
+			}
+			suma+=potencia;
+		}
+		return suma;
+	}
+	
+
+	public static void main(String[] args) {
+		Ejercicio2 interfaz=new Ejercicio2();
+		interfaz.run();
+	}
+
+}
