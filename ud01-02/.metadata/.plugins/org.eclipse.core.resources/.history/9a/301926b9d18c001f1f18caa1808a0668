@@ -1,0 +1,74 @@
+package ud01_02_2;
+
+public class Alumno {
+
+	private String nombre;
+	private int edad;
+	private Matricula matricula;
+	public Alumno(String nombre, int edad, Matricula matricula) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+		this.matricula = matricula;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public Matricula getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(Matricula matricula) {
+		this.matricula = matricula;
+	}
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", edad=" + edad + ", matricula=" + matricula + "]";
+	}
+	public void calcularCosteAcademia(int edad) {//solo viasualiza no devuelve
+		int horas=introducirHoras();
+		double seguro=0.5;
+		if(edad<=25) {
+			float coste=(float) (horas*seguro);
+			System.out.println("El coste diario es de: "+coste+" €");
+		}else {
+			System.out.println("Tienes mas de 25 años");
+		}
+	
+	}
+	public int introducirHoras() {
+		System.out.println("Introduce el numero de horas diarios que asistes al día:");
+		int numHoras=sc.nextInt();
+		return numHoras;
+	}
+	public int calcularCosteDiario(String nomCurso) {
+		int horas=introducirHoras();
+		String curso=nomCurso.toUpperCase();
+		int precio=0;
+		
+		switch(curso) {
+		case "FPB":
+			precio=horas*20;
+			break;
+		case "GM":
+			precio=horas*25;
+			break;
+		case "GS":
+			precio=horas*30;
+			break;
+			default:
+				precio=0;
+		}
+		return precio;
+	}
+	
+	
+}

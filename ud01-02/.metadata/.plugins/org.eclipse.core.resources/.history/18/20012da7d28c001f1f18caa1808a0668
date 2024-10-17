@@ -1,0 +1,29 @@
+package ud01_02_2;
+import java.util.*;
+public class Academia {
+	public static Scanner sc=new Scanner(System.in);
+	
+	public void run() {
+		
+	}
+	public Alumno crearAlumno() {
+		System.out.println("Introduce el nombre del alumno: ");
+		String nombre=sc.next();
+		System.out.println("Introduce la edad: ");
+		int edad=sc.nextInt();
+		System.out.println("Introduce numero de expediente para la matricula");
+		int numExp=sc.nextInt();
+		System.out.println("Escoge una de las siguientes opciones: FPB,GM,GS");
+		String curso=sc.next();
+		Matricula matricula=new Matricula(numExp,curso);
+		Alumno alumno=new Alumno(nombre,edad,matricula);
+		return alumno;
+	}
+
+	public static void main(String[] args) {
+		Academia interfaz=new Academia();
+		interfaz.run();
+
+	}
+
+}
