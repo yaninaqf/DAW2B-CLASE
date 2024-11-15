@@ -1,0 +1,53 @@
+package unidad4_02;
+import java.util.*;
+public class Principal {
+public static Scanner sc=new Scanner(System.in);
+
+public Principal() {
+	 
+}
+public void run() {
+	
+}
+public Deposito crarDeposito() {
+	Deposito deposito=new Deposito(titular(),capitalFijo(),diasInvertido(),interesFijo());
+	return deposito;
+}	
+
+public Deposito crearEstructura() {
+	Deposito estructurado=new DepositoEstructurado(titular(),capitalFijo(),diasInvertido(),interesFijo(),,interesVariable());
+}
+
+
+public String titular() {
+	System.out.println("Nombre titular");
+	return sc.next();
+	
+	}
+public double capitalFijo() {
+	System.out.println("Introducir capital Fijo");
+	return sc.nextDouble();
+}
+
+public int diasInvertido() {
+	System.out.println("Cuantos días quieres invertir");
+	return sc.nextInt();
+			}
+public double interesFijo() {
+	System.out.println("Que interés fijo quieres: ");
+	return sc.nextDouble();
+}
+public double interesVariable() {
+	System.out.println("Que interés variable quieres: ");
+	return sc.nextDouble();
+}
+public double capitalVariable() {
+	System.out.println("Introducir capital variable");
+	return sc.nextDouble();
+}	public static void main(String[] args) {
+		Principal interfaz=new Principal();
+		interfaz.run();
+
+	}
+
+}
